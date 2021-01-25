@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <div class="position" id="board">
+      <h1>Tic Tac Toe</h1>
+      <div class="row">
+        <div class="top left" id="cell"> </div>
+        <div class="top middle" id="cell"></div>
+        <div class="top right" id="cell"></div>
+      </div>
+
+      <div class="row">
+        <div class="middle left" id="cell"></div>
+        <div class="center" id="cell"></div>
+        <div class="middle right" id="cell"></div>
+      </div>
+
+      <div class="row">
+        <div class="bottom left" id="cell"></div>
+        <div class="bottom center" id="cell"></div>
+        <div class="bottom right" id="cell"></div>
+      </div>
+    </div>
+    <div>
+      <div class="announce-winner" id="announceWinner"></div>
+      <div data-announce-winner-text></div>
+      <button id="playAgain">Play Again</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+:root {
+  --cell-size: 100px;
+  --mark-size: calc(let(--div) * .9);
+}
+
+body {
+  margin: 0;
+}
+
+#board {
+  padding-top: 3em;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  font-family: garamond, serif;
+}
+
+.row {
+  margin: 0 auto;
+  clear: both;
+  text-align: center;
+  width: 302px;
+}
+
+.row > div {
+  float: left;
+  height: 100px;
+  width: 100px;
+  cursor:pointer;
+  display:flex;
+  justify-content: center;
+  line-height: 100px;
+  font-size: 75px;
+}
+
+.top {
+  border-bottom: 1px solid black;
+}
+
+.bottom {
+  border-top: 1px solid black;
+}
+
+.left {
+  border-right: 1px solid black;
+}
+
+.right {
+  border-left: 1px solid black;
+}
+
+.top:hover,
+.middle:hover,
+.bottom:hover,
+.center:hover {
+  background-color: lightblue;
+}
+
+#cell.x::before
+#cell.x::after,
+#cell.circle::before {
+  background-color: black;
+}
+
+
+
+#board.x .cell:not(.x):not(.circle):hover::before,
+#board.x .cell:not(.x):not(.circle):hover::after,
+#board.circle .cell:not(.x):not(.circle):hover::before {
+  background-color: lightgrey;
+}
+
+
+.announce-winner {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: darkgrey;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 5rem;
+  flex-direction: column;
+}
+
+.playAgain button {
+  font-size: 3rem;
+  background-color: white;
+  border: 1px solid black;
+  padding: .25em .5em;
+  cursor: pointer;
+}
+
+.announce-winner button:hover {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+.announce-winner.show {
+  display: flex;
+}
